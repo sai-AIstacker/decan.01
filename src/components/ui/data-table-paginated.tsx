@@ -44,7 +44,7 @@ export function DataTablePaginated<T>({
   const [loading, setLoading] = useState(true);
   const [sort, setSort]       = useState<string | undefined>();
   const [dir, setDir]         = useState<"asc" | "desc">("asc");
-  const searchTimer           = useRef<ReturnType<typeof setTimeout>>();
+  const searchTimer           = useRef<ReturnType<typeof setTimeout>>(undefined);
 
   const load = useCallback(async (p: number, q: string, s?: string, d?: "asc" | "desc") => {
     setLoading(true);
