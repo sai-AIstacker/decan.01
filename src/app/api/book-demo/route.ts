@@ -6,7 +6,8 @@ const CALENDAR_ID      = process.env.GOOGLE_CALENDAR_ID || "primary";
 const ADMIN_EMAIL      = process.env.DEMO_ADMIN_EMAIL   || "admin@decanschool.com";
 const SLOT_DURATION_MS = 30 * 60 * 1000;
 const VALID_SLOTS      = new Set(["10:00","11:00","12:00","14:00","15:00","16:00"]);
-const resend           = new Resend(process.env.RESEND_API_KEY);
+
+export const dynamic = "force-dynamic";
 
 function parseServiceKey() {
   const raw = process.env.GOOGLE_SERVICE_ACCOUNT_KEY;
@@ -109,6 +110,8 @@ export async function POST(req: NextRequest) {
     const { label, color } = scoreLabel(score);
     const dateLabel = slotStart.toLocaleDateString("en-US", { weekday:"long", year:"numeric", month:"long", day:"numeric", timeZone:"UTC" });
     const timeLabel = `${time} UTC`;
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     // Admin email
     await resend.emails.send({
