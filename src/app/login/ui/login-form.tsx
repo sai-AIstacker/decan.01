@@ -11,9 +11,9 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="w-full h-[52px] rounded-full bg-[#0a0a0a] dark:bg-white text-white dark:text-[#0a0a0a] text-[15px] font-semibold tracking-tight flex items-center justify-center gap-2 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed hover:opacity-90 active:opacity-80"
+      className="btn-primary w-full h-[52px] !flex items-center justify-center gap-2 mt-2 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
     >
-      {pending ? <Loader2 size={17} className="animate-spin" /> : "Sign In"}
+      {pending ? <Loader2 size={18} className="animate-spin" /> : "Sign in"}
     </button>
   );
 }
