@@ -64,10 +64,10 @@ export default async function AccountingExpensesPage() {
             <p className="text-sm text-zinc-600 dark:text-zinc-400">Record and review operational expenses with category and method tracking.</p>
           </div>
           <div className="flex flex-wrap gap-2">
-            <Button variant="secondary" size="sm" asChild>
+            <Button variant="outline" size="sm" asChild>
               <a href="/accounting/ledger">Ledger view</a>
             </Button>
-            <Button variant="secondary" size="sm" asChild>
+            <Button variant="outline" size="sm" asChild>
               <a href="/accounting/reports">Reports</a>
             </Button>
           </div>
