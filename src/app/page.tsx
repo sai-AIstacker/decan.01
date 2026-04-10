@@ -20,7 +20,7 @@ export default async function Home() {
         Run your entire school on one modern platform.
       </h1>
       <p className="mt-4 max-w-lg text-[14px] text-[var(--muted-foreground)] leading-relaxed">
-        Academics, attendance, exams, finance, HR, and communication — all in one secure, role-based system built for schools.
+        Academics, attendance, exams, finance, HR, and communication — all in one high security, role-based system built for schools.
       </p>
 
       <div className="mt-8 flex items-center gap-3">
@@ -34,7 +34,7 @@ export default async function Home() {
       <div className="mt-14 grid w-full max-w-3xl gap-3 sm:grid-cols-4 text-left">
         {[
           { icon: Users, label: "Role-based dashboards", desc: "Admin, teacher, student, parent, HR, accounting portals." },
-          { icon: ShieldCheck, label: "Secure by design", desc: "Supabase auth with database-level row security." },
+          { icon: ShieldCheck, label: "High Security", desc: "Enterprise-grade auth with database-level row security." },
           { icon: BarChart3, label: "Live analytics", desc: "Real-time KPIs and charts for every role." },
           { icon: BookOpen, label: "Full academics", desc: "Classes, exams, results, timetables and more." },
         ].map(item => {
