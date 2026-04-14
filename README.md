@@ -1,4 +1,4 @@
-# SSVM School Management
+# School Management system
 
 Next.js frontend + Supabase auth/database with role-based dashboards:
 `admin`, `teacher`, `student`, `parent`, `app_config`, `accounting`, `hr`.
